@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { alpacaOptions } from './model/AlpacaOptions';
 import { ElementOption } from './model/ElementOption';
 import { Headers } from './model/Headers';
+import { toPng } from 'html-to-image';
 
 @Component({
   selector: 'app-root',
@@ -117,5 +118,18 @@ export class AppComponent {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  downloadAlpaca() {
+    const currentAlpaca = document.getElementById('alpaca')!;
+    toPng(currentAlpaca).then(dataUrl => {
+      const link = document.createElement('a');
+      link.setAttribute('target', '_blank');
+      link.setAttribute('href', dataUrl);
+      link.setAttribute('download', `alpaca.png`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    })
   }
 }
