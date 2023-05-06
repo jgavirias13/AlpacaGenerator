@@ -13,6 +13,7 @@
     border: solid 2px #F0F8FF;
     background-color: white;
     border-radius: 5%;
+    cursor: pointer;
 
     &-image {
       width: 200px;
@@ -30,4 +31,8 @@
       align-items: center;
     }
   }
+}
+
+.selected {
+  background-color: #99d6ff;
 }

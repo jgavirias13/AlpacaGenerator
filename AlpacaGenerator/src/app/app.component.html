@@ -1,8 +1,16 @@
 <div class="app">
-  <app-visual-alpaca class="app__alpaca"/>
+  <app-visual-alpaca class="app__alpaca" />
   <div class="app__options">
-    <app-selector class="app__options-selector" (selectionChange)="onSelectionChange($event)"/>
-    <app-element-options class="app__options-element" [options]="options" />
+    <app-selector
+      class="app__options-selector"
+      (selectionChange)="onSelectionChange($event)"
+    />
+    <app-element-options
+      class="app__options-element"
+      [options]="options"
+      [selected]="getSelectedForCurrentHeader()"
+      (elementSelected)="onElementSelected($event)"
+    />
   </div>
 </div>
 
