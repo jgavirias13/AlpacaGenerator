@@ -3,6 +3,27 @@
   width: 100%;
   flex-direction: row;
 
+  &__actions {
+    z-index: 10;
+    position: fixed;
+    width: 20px;
+    left: 10px;
+    top: 30px;
+
+    &-button {
+      margin-bottom: 20px;
+      background-color: white;
+      border: solid 5px white;
+      border-radius: 100%;
+      color: #999999;
+      cursor: pointer;
+
+      &:hover {
+        color: #808080;
+      }
+    }
+  }
+
   &__options {
     display: flex;
     flex-direction: column;
