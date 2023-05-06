@@ -9,5 +9,13 @@ import { ElementOption } from '../model/ElementOption';
 export class ElementOptionsComponent {
   @Input() options!: Array<ElementOption>;
   @Input() selected!: number;
-  @Output() elementSelected = new EventEmitter<ElementOption>()
+  @Output() elementSelected = new EventEmitter<ElementOption>();
+
+  onElementSelected(element: ElementOption) {
+    if (element.id === this.selected) {
+      this.elementSelected.emit(undefined);
+    } else {
+      this.elementSelected.emit(element);
+    }
+  }
 }

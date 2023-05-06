@@ -3,7 +3,7 @@
     class="element-options__element"
     [class.selected]="option.id === selected"
     *ngFor="let option of options"
-    (click)="elementSelected.emit(option)"
+    (click)="onElementSelected(option)"
   >
     <img
       [src]="option.imagePath"

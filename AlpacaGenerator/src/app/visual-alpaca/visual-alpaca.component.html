@@ -2,6 +2,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.BACKGROUND) &&
+      selectedOptions.get(headers.BACKGROUND) &&
       selectedOptions.get(headers.BACKGROUND)!.id !== 0
     "
     [src]="selectedOptions.get(headers.BACKGROUND)!.imagePath"
@@ -10,6 +11,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.NECK) &&
+      selectedOptions.get(headers.NECK) &&
       selectedOptions.get(headers.NECK)!.id !== 0
     "
     [src]="selectedOptions.get(headers.NECK)!.imagePath"
@@ -18,6 +20,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.LEG) &&
+      selectedOptions.get(headers.LEG) &&
       selectedOptions.get(headers.LEG)!.id !== 0
     "
     [src]="selectedOptions.get(headers.LEG)!.imagePath"
@@ -26,6 +29,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.EARS) &&
+      selectedOptions.get(headers.EARS) &&
       selectedOptions.get(headers.EARS)!.id !== 0
     "
     [src]="selectedOptions.get(headers.EARS)!.imagePath"
@@ -34,6 +38,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.EYES) &&
+      selectedOptions.get(headers.EYES) &&
       selectedOptions.get(headers.EYES)!.id !== 0
     "
     [src]="selectedOptions.get(headers.EYES)!.imagePath"
@@ -43,6 +48,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.MOUTH) &&
+      selectedOptions.get(headers.MOUTH) &&
       selectedOptions.get(headers.MOUTH)!.id !== 0
     "
     [src]="selectedOptions.get(headers.MOUTH)!.imagePath"
@@ -51,6 +57,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.ACCESORIES) &&
+      selectedOptions.get(headers.ACCESORIES) &&
       selectedOptions.get(headers.ACCESORIES)!.id !== 0
     "
     [src]="selectedOptions.get(headers.ACCESORIES)!.imagePath"
@@ -59,6 +66,7 @@
   <img
     *ngIf="
       selectedOptions.has(headers.HAIR) &&
+      selectedOptions.get(headers.HAIR) &&
       selectedOptions.get(headers.HAIR)!.id !== 0
     "
     [src]="selectedOptions.get(headers.HAIR)!.imagePath"
