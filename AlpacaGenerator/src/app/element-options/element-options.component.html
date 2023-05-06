@@ -1,0 +1,12 @@
+<div class="element-options">
+  <div class="element-options__element" *ngFor="let option of options">
+    <img
+      [src]="option.imagePath"
+      [alt]="option.name"
+      class="element-options__element-image"
+    />
+    <div class="element-options__element-name">
+      <span>{{ option.name }}</span>
+    </div>
+  </div>
+</div>

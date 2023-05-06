@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { alpacaOptions } from './model/AlpacaOptions';
+import { ElementOption } from './model/ElementOption';
+import { Headers } from './model/Headers';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AlpacaGenerator';
+  options: Array<ElementOption> = [];
+
+  ngOnInit() {
+    this.options = alpacaOptions.get(Headers.HAIR)!;
+  }
+
+  onSelectionChange(selection: Headers) {
+    this.options = alpacaOptions.get(selection)!;
+  }
 }

@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SelectorComponent } from './selector/selector/selector.component';
-import { ElementOptionsComponent } from './options/element-options/element-options.component';
-import { VisualAlpacaComponent } from './alpaca/visual-alpaca/visual-alpaca.component';
+import { ElementOptionsComponent } from './element-options/element-options.component';
+import { VisualAlpacaComponent } from './visual-alpaca/visual-alpaca.component';
 
 @NgModule({
   declarations: [

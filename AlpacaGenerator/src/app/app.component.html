@@ -1,5 +1,9 @@
-<app-visual-alpaca />
-<app-selector />
-<app-element-options />
+<div class="app">
+  <app-visual-alpaca class="app__alpaca"/>
+  <div class="app__options">
+    <app-selector class="app__options-selector" (selectionChange)="onSelectionChange($event)"/>
+    <app-element-options class="app__options-element" [options]="options" />
+  </div>
+</div>
 
 <router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+
+    &-selector {
+      min-width: 700px;
+      overflow-x: auto;
+    }
+
+    &-element {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+  }
+}

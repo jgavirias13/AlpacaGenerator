@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ElementOption } from '../model/ElementOption';
 
 @Component({
   selector: 'app-element-options',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./element-options.component.scss']
 })
 export class ElementOptionsComponent {
-
+  @Input() options!: Array<ElementOption>;
 }

@@ -1,1 +1,10 @@
-<p>selector works!</p>
+<div class="selector">
+  <button
+    class="selector__option"
+    *ngFor="let header of headerOptions"
+    [class.selected]="selected === header"
+    (click)="onSelectionChange(header)"
+  >
+    {{ header }}
+  </button>
+</div>
